@@ -1,5 +1,6 @@
 FROM jenkinsci/blueocean
 
+ENV JENKINS_HOME /var/lib/jenkins
 # Disable initial setup
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
