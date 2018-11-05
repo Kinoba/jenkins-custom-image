@@ -2,10 +2,10 @@
 
 ## Setup
 
-- Copy the required params from the folder `params.dist` to the folder `params`:
+- Move the required params from the folder `params.dist` to the folder `params`:
 
 ```
-cp -R params.dist params
+mv params.dist params
 ```
 
 - Change the params inside __each__ of the files in the params folder according to your setup.
