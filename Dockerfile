@@ -27,5 +27,12 @@ COPY groovy/git.groovy /usr/share/jenkins/ref/init.groovy.d/git.groovy
 # SSH master private key
 COPY groovy/ssh-key.groovy /usr/share/jenkins/ref/init.groovy.d/ssh-key.groovy
 
+# Create slave nodes
+COPY groovy/nodes/asus.groovy /usr/share/jenkins/ref/init.groovy.d/asus.groovy
+COPY groovy/nodes/tower.groovy /usr/share/jenkins/ref/init.groovy.d/tower.groovy
+
+# Install additional plugins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+
+USER jenkins
